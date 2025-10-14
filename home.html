@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Tests (Classes 6-8)</title>
+
+  <link rel="stylesheet" href="style1.css" />
+
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+        
+        <h1 class="logo">Lab on Table</h1>
+      <nav class="top-nav">
+          <a href="index.html">Home</a>
+         <a href="home.html">Pre Student Test</a>
+        <a href="#tests" class="active"></a>
+          <a href="test.html">Post Student Test</a>
+       
+        
+      </nav>
+    </div>
+  </header>      
+   
+  <main class="container">
+    <section id="home" class="hero">
+        
+        <p> Improving Students Learning through STEM Project-Based Learning</h1>
+         <h1 class="logo"> Student Tests</p>
+        
+      <h2>Pre-Student test — Class 6, 7 & 8 (Maths & Physics)</h2>
+      <p>Take short MCQ tests and get an instant analysis & downloadable PDF report of topics that need practice.</p>
+    </section>
+
+    <section id="tests" class="tests">
+      <div class="controls">
+        <label>
+          Student name:
+          <input id="studentName" type="text" placeholder="Enter name (optional)" />
+        </label>
+
+        <label>
+          Class:
+          <select id="classSelect">
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+          </select>
+        </label>
+
+        <label>
+          Subject:
+          <select id="subjectSelect">
+            <option value="maths">Maths</option>
+            <option value="physics">Physics</option>
+          </select>
+        </label>
+
+        <button id="startTestBtn" class="btn">Start Test (10 Qs)</button>
+      </div>
+
+      <div id="testArea" class="test-area hidden">
+        <div id="progressLine" class="progress-line">Question <span id="qNum"></span> / <span id="qTotal"></span></div>
+
+        <form id="quizForm" class="quiz-form">
+          <div id="questionWrap"></div>
+
+          <div class="quiz-actions">
+            <button type="button" id="prevBtn" class="btn small">Previous</button>
+            <button type="button" id="nextBtn" class="btn small">Next</button>
+            <button type="submit" id="submitBtn" class="btn primary">Submit Test</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="reportArea" class="report-area hidden">
+        <h3>Test Report</h3>
+        <div id="reportSummary" class="report-summary"></div>
+
+        <h4>Topic Analysis</h4>
+        <div id="topicAnalysis" class="topic-analysis"></div>
+
+        <h4>Detailed Questions</h4>
+        <div id="detailedAnswers" class="detailed-answers"></div>
+
+        <div class="report-actions">
+          <button id="downloadPdfBtn" class="btn">Download PDF Report</button>
+          <button id="restartBtn" class="btn">Take another test</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Contact</h3>
+      <p>Email: anandverma.msbe24@anu.edu.in | Phone: +91 9035756213</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="yr"></span> Student Testing
+  </footer>
+
+  <script src="questions1.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>

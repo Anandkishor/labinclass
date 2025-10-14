@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Test - Lab on Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+    <div class="container header-inner">
+        
+        <h1 class="logo">Lab on Table</h1>
+         
+        
+        
+     
+      <nav class="top-nav">
+          <a href="index.html">Home</a>
+         <a href="home.html">Pre Student Test</a> 
+          <a href="test.html">Post Student Test</a>    
+      </nav>
+    </div>
+  </header>      
+  <header>
+    <h1>Post Student Test Portal</h1>
+    
+     
+  </header>
+
+  <main>
+    <!-- Logo -->
+    <img src="logo.png" alt="STEM Kit Logo" class="logo" />
+
+    <!-- Student Info / Start Test -->
+    <section id="student-info">
+      <label for="studentName">Enter Your Name:</label><br>
+      <input type="text" id="studentName" placeholder="Your Name" />
+      <br>
+      <button id="startBtn">Start Test</button>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-container" style="display:none;">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result-container" style="display:none;">
+      <h2>Result & Analysis</h2>
+      <div id="result"></div>
+     <!-- Responsive Chart -->
+  <div id="chartContainer" style="width:100%; max-width:700px; height:300px; margin:auto;">
+    <canvas id="resultChart"></canvas>
+  </div>
+      <button id="downloadPDF">Download PDF Report</button>
+    </section>
+  </main>
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="questions.js"></script>
+  <script>
+    // Attach start button event after page load
+    document.getElementById("startBtn").addEventListener("click", startQuiz);
+    document.getElementById("downloadPDF").addEventListener("click", generatePDF);
+  </script>
+</body>
+</html>

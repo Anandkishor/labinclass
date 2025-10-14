@@ -1,0 +1,169 @@
+/* ---------- General ---------- */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #004aad;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    max-width: 100%;
+}
+
+/* ---------- Main Containers ---------- */
+#student-info,
+#quiz-container,
+#result-container {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* ---------- Inputs & Buttons ---------- */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background: #004aad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #003080;
+}
+
+/* ---------- Quiz Options ---------- */
+#options button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #004aad;
+    background: #f0f4ff;
+    transition: background 0.3s, color 0.3s;
+}
+
+#options button:hover {
+    background: #d0e0ff;
+}
+
+/* ---------- Result Section ---------- */
+#result p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    #student-info,
+    #quiz-container,
+    #result-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #options button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+/* ---------- Extra Small Devices ---------- */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    #options button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #student-info input[type="text"] {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+#chartContainer {
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+#resultChart {
+  width: 100% !important;
+  height: 100% !important;
+}
